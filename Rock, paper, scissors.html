@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+        body {
+        background-color: lightblue;
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+        }
+
+        .Message {
+            text-align: center;
+        }
+        .Scores {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        .badge {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+
+        #user-score, #Mickey-score {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .Who {
+            text-align: center;
+        }
+        .winner-box {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+ 
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="pngkey.com-mickey-png-194858.png" width="50" height="50" class="d-inline-block align-top" alt="">
+            <span class="ms-2">Rock Paper Scissors with Mickey</span>
+        </a>
+    </nav>
+    <div class="Message">
+        <h2> Play a Game with Mickey Mouse </h2>
+    </div>
+    <div class="Scores">
+        <div id="user-label" class="badge">User</div>
+        <span id="user-score">0</span>:<span id="Mickey-score">0</span>
+        <div id="Mickey-label" class="badge">Mickey</div>
+    </div>    
+    <div class="container mt-4">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-sm-4">
+                <div class="option text-center">
+                    <img src="rock.png" width="150" alt="Image of Fist hand of Mickey mouse">
+                    <button id="rockButton"  class="btn btn-primary btn-select" data-option="rock">Rock</button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="option text-center">
+                    <img src="hand-156701_640.png" width="150" alt="Image of paper hand of Mickey mouse">
+                    <button id="paperButton" class="btn btn-primary btn-select" data-option="paper">Paper</button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="option text-center">
+                    <img src="hand-156691_640.png" width="150" alt="Image of scissors hand of Mickey mouse">
+                    <button id="scissorsButton" class="btn btn-primary btn-select" data-option="scissors">Scissors</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Who">
+        <h2> The Winner is?? </h2>
+        <!-- Blue text box for winner -->
+        <div class="winner-box" id="winner-box">
+            <!-- This will be updated dynamically via JavaScript -->
+            <!-- Initially, you can leave it empty or with some default message -->
+            Winner will be displayed here
+        </div>
+    </div>
+    <script src="RockpaperscissorsPt2.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
